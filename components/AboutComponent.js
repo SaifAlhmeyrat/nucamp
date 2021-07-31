@@ -13,7 +13,7 @@ const mapStateToProps = state => {
 
 const Mission = () => {
     return (
-        <Card title={'Our Mission'}>
+        <Card title='Community Partners'>
             <Text style={{ margin: 10 }}>
                 We present a curated database of the best campsites in the vast woods and backcountry of the World Wide Web Wilderness. We increase access to adventure for the public while promoting safe and respectful use of resources. The expert wilderness trekkers on our staff personally verify each campsite to make sure that they are up to our standards. We also present a platform for campers to share reviews on campsites they have visited with each other.
             </Text>
@@ -23,7 +23,7 @@ const Mission = () => {
 
 class About extends Component {
 
-    static navigationoptions = {
+    static navigationOptions = {
         title: 'About Us'
     }
 
@@ -34,7 +34,7 @@ class About extends Component {
                 <ListItem
                     title={item.name}
                     subtitle={item.description}
-                    leftAvatar={{source: {uri: baseUrl + item.image}}}
+                    leftAvatar={{ source: { uri: baseUrl + item.image } }}
                 />
             );
         };
@@ -67,7 +67,7 @@ class About extends Component {
             <ScrollView>
                 <Mission />
                 <Card>
-                <FlatList 
+                    <FlatList
                         data={this.props.partners.partners}
                         renderItem={renderPartner}
                         keyExtractor={item => item.id.toString()}
