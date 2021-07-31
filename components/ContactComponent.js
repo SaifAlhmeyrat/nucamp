@@ -7,7 +7,7 @@ class Contact extends Component {
         super(props);
     }
 
-    static navigationoptions = {
+    static navigationOptions = {
         title: 'Contact Us'
     }
 
